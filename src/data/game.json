@@ -1,26 +1,12 @@
 {
-    "game": "UltimateMarvelVsCapcom3",
-    "creator": "ManualTeam",
+    "game": "Yacht",
+    "creator": "Spineraks",
 
-    "filler_item_name": "Free Character of Your Choice",
+    "filler_item_name": "Fun Fact",
 
     "starting_items": [
         {
-            "items": ["Ryu", "Akuma"]
-        },
-        {
-            "item_categories": ["Left Side"],
-            "random": 1
-        },
-        {
-            "items": ["Wolverine", "Storm", "Phoenix"],
-            "random": 1
-        },
-        {
-            "item_categories": ["Trash"]
-        },
-        {
-            "random": 3
+            "items": ["Dice", "Category Choice"]
         }
     ]
 }
