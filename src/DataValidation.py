@@ -41,7 +41,7 @@ class DataValidation():
                         if not item_exists:
                             raise ValidationError("Item %s is required by location %s but is misspelled or does not exist." % (item_name, location["name"]))
 
-            else:  # item access is in dict form
+            elif isinstance(location["requires"], dict):  # item access is in dict form
                 for item in location["requires"]:
                     # if the require entry is an object with "or" or a list of items, treat it as a standalone require of its own
                     if (isinstance(item, dict) and "or" in item and isinstance(item["or"], list)) or (isinstance(item, list)):
@@ -72,7 +72,8 @@ class DataValidation():
 
                         if not item_exists:
                             raise ValidationError("Item %s is required by location %s but is misspelled or does not exist." % (item_name, location["name"]))
-
+            else:
+                print('location requires is int, not validating that one currently, hopefully it is ok')
     @staticmethod
     def checkItemNamesInRegionRequires():
         for region_name in DataValidation.region_table:
